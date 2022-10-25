@@ -43,7 +43,8 @@ def _guard_py_ver():
 
     if not min_py <= cur_py < max_py:
         msg = ('Cannot install on Python version {}; only versions >={},<{} '
-               'are supported.')
+               'are supported.\n' +
+               'Please see https://github.com/numba/numba/issues/6482 for why.')
         raise RuntimeError(msg.format(cur_py, min_py, max_py))
 
 
